@@ -1,4 +1,5 @@
 var expect = require('chai').expect,
+    through = require('through'),
     testData = require('..');
 
 describe('json-testdata', function() {
@@ -15,5 +16,23 @@ describe('json-testdata', function() {
     expect(testData.leveldata[53].value.name).to.equal('browserify');
     expect(testData.leveldata[53].value.author.name).to.equal('James Halliday');
     done();
+  });
+
+  it('should be able to get a read stream', function(done) {
+    var count = 0;
+    testData.readStream()
+      .pipe(through(
+        function (data) {
+          if (count === 53) {
+            expect(data.name).to.equal('browserify');
+            expect(data.author.name).to.equal('James Halliday');
+          }
+          count++;
+        },
+        function () {
+          expect(count).to.equal(780);
+          done();
+        }
+      ));
   });
 });
