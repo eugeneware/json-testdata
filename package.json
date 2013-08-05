@@ -1,0 +1,22 @@
+{
+  "name": "json-testdata",
+  "version": "0.0.1",
+  "description": "Supplies a range of useful json data for testing.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eugeneware/json-testdata.git"
+  },
+  "keywords": [
+    "json",
+    "test",
+    "package.json",
+    "testing",
+    "data"
+  ],
+  "author": "Eugene Ware <eugene@noblesamurai.com>",
+  "license": "BSD"
+}
