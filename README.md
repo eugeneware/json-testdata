@@ -12,7 +12,7 @@ $ npm install json-testdata
 
 ## Usage
 
-## Just an array of JSON data
+### Just an array of JSON data
 
 Just require the module to get a big array of JSON test data sources from npm:
 
@@ -29,7 +29,7 @@ var batch = testData.map(function (data, i) {
 db.batch(batch);
 ```
 
-## An array of levelup data:
+### An array of levelup data:
 
 Do the above stuff for you:
 
@@ -39,7 +39,7 @@ var batch = require('json-testdata').leveldata;
 db.batch(batch);
 ```
 
-## A stream of JSON data
+### A stream of JSON data
 
 You can get the data as a stream too:
 
