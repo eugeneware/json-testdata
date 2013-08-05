@@ -4,7 +4,7 @@
   "description": "Supplies a range of useful json data for testing.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/.bin/mocha"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,9 @@
     "data"
   ],
   "author": "Eugene Ware <eugene@noblesamurai.com>",
-  "license": "BSD"
+  "license": "BSD",
+  "devDependencies": {
+    "chai": "~1.7.2",
+    "mocha": "~1.12.0"
+  }
 }
