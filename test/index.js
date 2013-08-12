@@ -4,9 +4,9 @@ var expect = require('chai').expect,
 
 describe('json-testdata', function() {
   it('should be able to get all the json data', function(done) {
-    expect(testData.length).to.equal(780);
-    expect(testData[53].name).to.equal('browserify');
-    expect(testData[53].author.name).to.equal('James Halliday');
+    expect(testData.data.length).to.equal(780);
+    expect(testData.data[53].name).to.equal('browserify');
+    expect(testData.data[53].author.name).to.equal('James Halliday');
     done();
   });
 

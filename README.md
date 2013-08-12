@@ -18,7 +18,7 @@ Just require the module to get a big array of JSON test data sources from npm:
 
 ``` js
 var db = levelup('mydb', { valueEncoding: 'json' });
-var testData = require('json-testdata');
+var testData = require('json-testdata').data;
 var batch = testData.map(function (data, i) {
   return {
     type: 'put',

@@ -1,6 +1,6 @@
 var Stream = require('stream');
-module.exports = require('./testdata');
-module.exports.leveldata = module.exports.map(function (data, i) {
+var testData = module.exports.data = require('./testdata');
+module.exports.leveldata = testData.map(function (data, i) {
   return {
     type: 'put',
     key: i,
@@ -12,7 +12,7 @@ module.exports.readStream = function (delay) {
   var s = new Stream();
   s.readable = true;
 
-  var data = module.exports.slice();
+  var data = testData.slice();
   var count = data.length;
 
   function end() {
