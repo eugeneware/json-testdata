@@ -1,6 +1,6 @@
 {
   "name": "json-testdata",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Supplies a range of useful json data for testing.",
   "main": "index.js",
   "scripts": {
